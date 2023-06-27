@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/itmp/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>数据导出</title>
+  </head>
+  <body>
+    <form id="formId" action="/itmp/user/sql" method="post">
+    <div class="container">
+  <h2>SQL查询结果导出</h2>
+    <div class="alert alert-secondary" role="alert">
+    可在下方输入框中填写查询SQL，查询结果直接导出Excel
+</div>
+  <div class="row">
+    <div class="col-md-12">
+       <textarea class="form-control" name="sql" aria-label="With textarea" style="height: 300px"></textarea>
+       <input id="sqlType" type="hidden" name="sqlType">
+    </div>
+  </div>
+
+  <br />
+  <div class="row">
+    <div class="col-md-10 offset-md-10">
+      <div class="dropdown">
+      <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        导出Excel
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" type="submit" href="javascript:submit_itmp();">ITMP</a>
+        <a class="dropdown-item" type="submit" href="javascript:submit_hrm();">HRM</a>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+
+  </div>
+</form>
+
+    
+
+    
+    <script src="/itmp/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="/itmp/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="/itmp/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      
+      function submit_itmp(){
+         document.getElementById('sqlType').value='itmp';
+         document.getElementById("formId").submit();
+      }
+      function submit_hrm(){
+         document.getElementById('sqlType').value='hrm';
+         document.getElementById("formId").submit();
+      }
+
+    </script>
+  </body>
+</html>
