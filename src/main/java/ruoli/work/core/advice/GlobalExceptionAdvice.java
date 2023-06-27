@@ -1,10 +1,10 @@
-package ruoli.work.common.advice;
+package ruoli.work.core.advice;
 
-import ruoli.work.common.entity.CommonException;
-import ruoli.work.common.entity.CommonResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import ruoli.work.core.entity.CommonException;
+import ruoli.work.core.entity.CommonResponse;
 import ruoli.work.common.util.ExceptionUtil;
 
 import javax.servlet.http.HttpServletRequest;

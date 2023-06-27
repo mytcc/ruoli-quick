@@ -1,4 +1,4 @@
-package ruoli.work.common.annotation;
+package ruoli.work.core.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

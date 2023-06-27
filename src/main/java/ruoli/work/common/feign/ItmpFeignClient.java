@@ -1,11 +1,11 @@
-package ruoli.work.module.common.feign;
+package ruoli.work.common.feign;
 
 
-import com.sun.java.swing.plaf.windows.WindowsBorders;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import ruoli.work.core.entity.CommonResponse;
 import ruoli.work.module.test.entity.SysUser;
 
 /**
@@ -21,5 +21,5 @@ public interface ItmpFeignClient{
                     method = RequestMethod.GET,
                     consumes = "application/json",
                     produces = "application/json")
-    ruoli.work.common.entity.CommonResponse<SysUser> getUser(@RequestParam String userId);
+    CommonResponse<SysUser> getUser(@RequestParam String userId);
 }

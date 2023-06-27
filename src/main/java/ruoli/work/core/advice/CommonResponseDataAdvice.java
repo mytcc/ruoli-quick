@@ -1,8 +1,6 @@
-package ruoli.work.common.advice;
+package ruoli.work.core.advice;
 
 import org.apache.skywalking.apm.toolkit.trace.TraceContext;
-import ruoli.work.common.annotation.IgnoreResponse;
-import ruoli.work.common.entity.CommonResponse;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -10,6 +8,8 @@ import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
+import ruoli.work.core.annotation.IgnoreResponse;
+import ruoli.work.core.entity.CommonResponse;
 
 
 /**

@@ -1,6 +1,4 @@
-package ruoli.work.module.common.entity;
-
-import org.springframework.http.HttpStatus;
+package ruoli.work.common.entity;
 
 public interface Constant {
 

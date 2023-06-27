@@ -2,16 +2,15 @@ package ruoli.work.module.test.controller;
 
 
 import org.springframework.stereotype.Controller;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import ruoli.work.module.common.feign.ItmpFeignClient;
+import ruoli.work.core.annotation.IgnoreAuthorize;
+import ruoli.work.core.entity.CommonException;
+import ruoli.work.core.entity.CommonResponse;
+import ruoli.work.common.feign.ItmpFeignClient;
 import ruoli.work.module.test.entity.EasyExcelUtils;
 import ruoli.work.module.test.entity.SysUser;
 import ruoli.work.module.test.service.impl.SysUserServiceImpl;
-import ruoli.work.common.annotation.IgnoreAuthorize;
-import ruoli.work.common.entity.CommonResponse;
-import ruoli.work.common.entity.CommonException;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
@@ -38,7 +37,7 @@ public class SysUserController {
     @GetMapping("/get")
     @IgnoreAuthorize
     public SysUser hello(@RequestParam String userId){
-        ruoli.work.common.entity.CommonException.returnIfNull(userId,"无法查询到人员信息");
+        CommonException.returnIfNull(userId,"无法查询到人员信息");
         SysUser user=userService.getById("123");
         return user;
     }

@@ -1,13 +1,9 @@
-package ruoli.work.module.common.interceptor;
+package ruoli.work.core.interceptor;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
-import ruoli.work.common.entity.CommonResponse;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import ruoli.work.common.annotation.IgnoreAuthorize;
 
 
 public class PermissionInterceptor implements HandlerInterceptor {

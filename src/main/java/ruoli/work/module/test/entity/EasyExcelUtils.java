@@ -2,6 +2,7 @@ package ruoli.work.module.test.entity;
 
 import com.alibaba.excel.EasyExcel;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import ruoli.work.core.entity.CommonException;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -26,7 +27,7 @@ public class EasyExcelUtils {
                     .sheet("数据导出")
                     .doWrite(dataList(data));
         } catch (Exception e) {
-            throw new ruoli.work.common.entity.CommonException(500,"执行数据导出出现错误",e);
+            throw new CommonException(500,"执行数据导出出现错误",e);
         }
     }
 

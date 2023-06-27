@@ -1,4 +1,4 @@
-package ruoli.work.common.entity;
+package ruoli.work.core.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

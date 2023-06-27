@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
-@MapperScan("ruoli.work.module.*.mapper")
+@MapperScan({"ruoli.work.module.*.mapper","ruoli.work.common.mapper"})
 @EnableDiscoveryClient
 @EnableFeignClients
 public class Application {
