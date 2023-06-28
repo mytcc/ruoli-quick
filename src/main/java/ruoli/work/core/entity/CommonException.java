@@ -3,11 +3,14 @@ package ruoli.work.core.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
+import ruoli.work.common.entity.Constant;
 
 @NoArgsConstructor
 @Setter
 @Getter
+@Slf4j
 public class CommonException  extends RuntimeException{
 
     private Integer errorCode;
@@ -34,6 +37,14 @@ public class CommonException  extends RuntimeException{
         if(result){
             throw new CommonException(400,errorMsg);
         }
+    }
+    public static void returnMesssage(String msg){
+        log.error("{}",msg);
+        throw new CommonException(Constant.HttpStatus.Code400.getCode(),msg);
+    }
+    public static void returnException(String msg,Throwable ex){
+        log.error("{},{}",msg,ex);
+        throw new CommonException(Constant.HttpStatus.Code500.getCode(),msg,ex);
     }
 
 }
